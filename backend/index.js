@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 require('dotenv').config();
-
+// apikey = AIzaSyASbz-Urvaj11Z6akHB-y4RpIGmzIsHwkw
 
 // The email field of team collection is indexed for faster seach
 app.get('/', async(req, res)=>{
