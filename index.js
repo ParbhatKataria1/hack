@@ -12,12 +12,10 @@ app.use(express.json());
 require('dotenv').config();
 
 
-
+// The email field of team collection is indexed for faster seach
 app.get('/', async(req, res)=>{
     try {
         const data = await UserModel.aggregate([{$lookup:{from:'teams', localField:"email", foreignField:"email", as:"brief"}}, {$project:{team_name:{$slice: ['$brief.team_name', 0, 1]}, full_name:1, email:1, number:1, city:1, url:1, _id:0}}], )
-        // const item = await UserModel.aggregate([{$lookup:{from:'teams', localField:"email", foreignField:"email", as:"brief"}}, {$project:{team_name:"$brief.team_name", full_name:1, email:1, number:1, city:1, url:1, _id:0}}]).explain();
-        // console.log(item)
         res.status(200).send(data);
     } catch (error) {
         res.status(400).send(error.message)
