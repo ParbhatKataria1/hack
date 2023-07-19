@@ -3,7 +3,7 @@ const button = document.getElementById('button');
 const loading = document.getElementById('loading');
 button.addEventListener('click', async()=>{
     loading.innerHTML = 'Loading...'
-    let data = await fetch('http://localhost:4500/');
+    let data = await fetch('https://hack1.onrender.com');
     data = await data.json();
     console.log(data);
     loading.innerHTML = ''
