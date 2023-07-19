@@ -11,14 +11,14 @@ button.addEventListener('click', async()=>{
 })
 
 function createtable(data){
-    let html = `<table style="font-size: large;"  border="1" cellpadding="4" >
-    <thead>
+    let html = `<table class="table"  cellpadding="8" >
+    <thead style="width: 90%;">
         <th>Team Name</th>
         <th>Full Name</th>
         <th>Email</th>
         <th>Number</th>
-        <th>City</th>
-        <th>URL</th>
+        <th >City</th>
+        <th >URL</th>
     </thead>
     <tbody >
         ${data.map((el)=>{
