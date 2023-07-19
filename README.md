@@ -1,6 +1,6 @@
 # hack
 
-## Application View
+## Application View - [Delployed Link](https://task-1-joinquery.netlify.app/)
 
 ### Table Page - [EndPoint Used For Data Fetching](https://hack1.onrender.com)
 
